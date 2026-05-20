@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H Sing Portfolio｜消费品决策体系</title>
+  <style>
+    :root{
+      --ink:#171411; --muted:#6f675d; --paper:#f6f1e8; --card:#fffaf0; --line:#dfd1bd;
+      --accent:#c65a1e; --accent2:#1e5f74; --deep:#102b35; --gold:#d6a84f; --ok:#2f7d4f;
+      --shadow:0 24px 80px rgba(31,24,15,.16); --radius:28px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family: ui-serif, Georgia, "Noto Serif SC", "Songti SC", serif;}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(circle at 20% 10%,rgba(198,90,30,.18),transparent 28%),radial-gradient(circle at 84% 4%,rgba(30,95,116,.16),transparent 28%),linear-gradient(90deg,rgba(23,20,17,.035) 1px,transparent 1px),linear-gradient(rgba(23,20,17,.03) 1px,transparent 1px);background-size:auto,auto,44px 44px,44px 44px;}
+    a{color:inherit}.wrap{width:min(1180px,92vw);margin:auto}.nav{position:sticky;top:0;z-index:5;background:rgba(246,241,232,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.brand{font-family:ui-sans-serif,"Noto Sans SC",sans-serif;font-weight:800;letter-spacing:.08em;font-size:13px}.links{display:flex;gap:18px;font:600 13px ui-sans-serif,"Noto Sans SC",sans-serif;color:var(--muted)}.links a{text-decoration:none}.links a:hover{color:var(--accent)}
+    .hero{padding:88px 0 56px}.eyebrow{font:800 12px ui-sans-serif,"Noto Sans SC",sans-serif;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}.hero h1{font-size:clamp(44px,7vw,86px);line-height:.98;margin:18px 0 22px;letter-spacing:-.06em;max-width:1020px}.hero h1 span{color:var(--accent2)}
+    .hero p{font-size:clamp(18px,2.2vw,24px);line-height:1.6;color:#423a32;max-width:850px;margin:0}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;margin-top:42px}.panel{background:rgba(255,250,240,.76);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{border-left:3px solid var(--accent);padding:12px 10px;background:rgba(255,255,255,.38);border-radius:12px}.metric b{display:block;font-size:24px;line-height:1;font-family:ui-sans-serif,"Noto Sans SC",sans-serif}.metric small{display:block;margin-top:8px;color:var(--muted);font:600 12px/1.35 ui-sans-serif,"Noto Sans SC",sans-serif}.quote{font-size:28px;line-height:1.35}.quote em{color:var(--accent);font-style:normal}.section{padding:44px 0}.section h2{font-size:clamp(30px,4vw,54px);line-height:1.05;letter-spacing:-.04em;margin:0 0 14px}.lead{color:var(--muted);font-size:18px;line-height:1.7;max-width:850px}.system{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}.node{min-height:170px;border:1px solid var(--line);border-radius:24px;background:var(--card);padding:20px;position:relative;overflow:hidden}.node:after{content:attr(data-n);position:absolute;right:14px;bottom:8px;font:800 56px ui-sans-serif;opacity:.08}.node h3{font:800 18px ui-sans-serif,"Noto Sans SC",sans-serif;margin:0 0 12px}.node p{font:500 14px/1.55 ui-sans-serif,"Noto Sans SC",sans-serif;color:var(--muted);margin:0}.node strong{color:var(--ink)}
+    .cases{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px}.case{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 12px 40px rgba(31,24,15,.08)}.case .tag{display:inline-flex;border:1px solid rgba(198,90,30,.35);color:var(--accent);border-radius:999px;padding:6px 10px;font:800 12px ui-sans-serif,"Noto Sans SC",sans-serif}.case h3{font-size:26px;line-height:1.15;margin:16px 0 10px}.case p{font:500 15px/1.7 ui-sans-serif,"Noto Sans SC",sans-serif;color:#4f473f}.case ul{margin:14px 0 0;padding-left:18px;font:500 14px/1.65 ui-sans-serif,"Noto Sans SC",sans-serif;color:var(--muted)}.proof{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font:700 12px/1.5 ui-sans-serif,"Noto Sans SC",sans-serif;color:#7b6d5c}.proof.ok:before{content:"证据强｜";color:var(--ok)}.proof.mid:before{content:"证据中｜";color:var(--gold)}.proof.weak:before{content:"待补证据｜";color:#b14d3a}.timeline{margin-top:24px;border-left:2px solid var(--line);padding-left:20px}.time{margin:0 0 20px;position:relative}.time:before{content:"";width:12px;height:12px;background:var(--accent);border-radius:50%;position:absolute;left:-27px;top:7px}.time h3{font:900 20px ui-sans-serif,"Noto Sans SC",sans-serif;margin:0}.time p{font:500 15px/1.7 ui-sans-serif,"Noto Sans SC",sans-serif;color:var(--muted);margin:6px 0 0}.mots{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:24px}.mot{background:var(--deep);color:#f8efe0;border-radius:22px;padding:18px;min-height:220px}.mot b{font:900 13px ui-sans-serif;color:var(--gold)}.mot h3{font-size:21px;line-height:1.2;margin:14px 0}.mot p{font:500 13px/1.55 ui-sans-serif;color:#cbbca6}.cta{margin:54px 0 76px;background:var(--ink);color:#fff;border-radius:34px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.cta h2{margin:0;font-size:34px}.cta p{color:#d7ccbd;font:500 15px/1.6 ui-sans-serif}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;background:var(--gold);color:#1d160d;text-decoration:none;padding:0 20px;font:900 14px ui-sans-serif,"Noto Sans SC",sans-serif}.foot{padding:28px 0 48px;color:var(--muted);font:600 12px/1.6 ui-sans-serif,"Noto Sans SC",sans-serif;border-top:1px solid var(--line)}
+    @media(max-width:900px){.hero-grid,.cases,.cta{grid-template-columns:1fr}.system,.mots{grid-template-columns:1fr 1fr}.metric-row{grid-template-columns:1fr 1fr}.links{display:none}}
+    @media(max-width:560px){.system,.mots{grid-template-columns:1fr}.metric-row{grid-template-columns:1fr}.panel{padding:20px}.hero{padding-top:58px}.case h3{font-size:22px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap"><div class="brand">H SING｜CONSUMER DECISION OS</div><div class="links"><a href="#system">体系</a><a href="#cases">案例</a><a href="#mot">Moments</a><a href="#evidence">证据</a></div></div></nav>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow">Portfolio attachment for recruiter / interview</div>
+      <h1>把消费品业务问题，变成可规模化运行的<span>决策系统</span></h1>
+      <p>黄灿星的职业主线不是“做报表”，而是识别消费品经营里的低效、黑箱与错配，用数据产品、自动化流程和 AI Agent，把决策质量规模化。</p>
+      <div class="hero-grid">
+        <div class="panel">
+          <div class="quote">从客户洞察、促销 ROI、流程效率、内控治理到 AI 工作流：<em>一套消费品经营决策操作系统。</em></div>
+        </div>
+        <div class="panel metric-row">
+          <div class="metric"><b>100亿+</b><small>促销费用 ROI 场景</small></div>
+          <div class="metric"><b>1000万+</b><small>促销费用节省</small></div>
+          <div class="metric"><b>600x</b><small>订单跟进效率提升</small></div>
+          <div class="metric"><b>85%+</b><small>Agent 自动化验证</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="system" class="section wrap">
+      <h2>消费品决策体系：5 层闭环</h2>
+      <p class="lead">这个网站不按公司堆经历，而是用一套决策链路串起所有工作：从外部市场信号，到经营资源配置，再到执行效率、治理风险和 AI 化放大。</p>
+      <div class="system">
+        <div class="node" data-n="01"><h3>市场与消费者信号</h3><p>舆情、电商、竞品、消费者反馈，回答<strong>机会在哪里</strong>。</p></div>
+        <div class="node" data-n="02"><h3>促销与利润决策</h3><p>PEA / CVE / ROI / Trade Fund，回答<strong>钱该投在哪</strong>。</p></div>
+        <div class="node" data-n="03"><h3>流程与运营效率</h3><p>SAP、订单、邮件、自动化，回答<strong>低效如何消除</strong>。</p></div>
+        <div class="node" data-n="04"><h3>治理与组织协同</h3><p>CSA、风险抽样、行动计划、培训，回答<strong>如何可控地规模化</strong>。</p></div>
+        <div class="node" data-n="05"><h3>AI Agent 放大器</h3><p>知识巡检、任务路由、复盘报告，回答<strong>如何进入 AI 原生工作</strong>。</p></div>
+      </div>
+    </section>
+
+    <section id="cases" class="section wrap">
+      <h2>可展示的作品集案例</h2>
+      <p class="lead">每个案例都建议做成独立页面：背景问题、系统机制、业务结果、证据材料。对外只展示脱敏版。</p>
+      <div class="cases">
+        <article class="case"><span class="tag">Midea / 美云智数</span><h3>从数据分析到客户解决方案</h3><p>围绕美妆、家电、舆情和电商数据，把客户问题转成可销售、可交付的数据产品方案。</p><ul><li>客户需求拆解：品牌宣传、KOL、网站、竞品、消费者反馈</li><li>输出行业通用模块：监测、洞察、预警、复盘</li><li>支撑百万级项目机会</li></ul><div class="proof mid">故事.txt、主要工作.txt、方案 PPT；需要进一步选 2-3 个脱敏案例。</div></article>
+        <article class="case"><span class="tag">P&G / P2P Automation</span><h3>把人工订单跟进变成全球自动化工具</h3><p>将 SAP 多报告下载、订单清洗、供应商联系人校验、邮件发送串成自动化流程。</p><ul><li>3000 张订单 10 分钟处理</li><li>效率提升约 600 倍</li><li>推广至 20+ 国家，节省约 5 FTE</li></ul><div class="proof ok">宝洁的Case_updated、八大问KWs、PG.txt。</div></article>
+        <article class="case"><span class="tag">P&G / Trade Fund</span><h3>百亿促销费用的 ROI 决策系统</h3><p>参与 GI / OPTIMA / SAP 整合与 PEA / CVE 能力建设，把促销费用、价格机制和客户利润纳入可复盘的经营系统。</p><ul><li>50+ PEA review & training sessions</li><li>Trade Fund operation quality 99%+</li><li>支持 CNY 1.5B / USD 234MM funding accrual</li></ul><div class="proof ok">China GTM Trade Fund Transformation Annual Letter、PEA story paper、Ali PEA CVE 手册。</div></article>
+        <article class="case"><span class="tag">P&G / Modeling Logic</span><h3>促销效果背后的算法口径</h3><p>围绕 POS、SKU、门店、价格与促销机制，拆分 Base Sales、Incremental Sales、Promotion Sales，识别真实促销贡献。</p><ul><li>Reference price calculation</li><li>Discount threshold / wholesale detection</li><li>Daily × SKU × Store granularity</li></ul><div class="proof ok">Offline PEA Logic、TMFS_PEA_Logic。</div></article>
+        <article class="case"><span class="tag">P&G / Digital CSA</span><h3>从 Excel 内控到数字化治理平台</h3><p>作为 Digital & Technical Advisor，设计实时可视、风险抽样、问题追踪、培训材料和行动计划的一站式 CSA 平台方案。</p><ul><li>Real-time visibility</li><li>Automated scorecards & defect management</li><li>Risk-based sampling / Action tracking</li></ul><div class="proof mid">Action plan CSA V2、Digital CSA。</div></article>
+        <article class="case"><span class="tag">Mars + OpenClaw</span><h3>从组织数字化到 AI Agent 工作流</h3><p>把过去的数据系统和自动化经验迁移到知识工作场景，通过多 Agent 协作、定时巡检和审计机制验证 AI 原生工作方式。</p><ul><li>OpenClaw 11 个 Agent 协作</li><li>任务路由 / Cron 调度 / 每日复盘</li><li>规则明确场景 85%+ 自动化率验证</li></ul><div class="proof weak">OpenClaw 材料较足；Mars 黑客松/BI/全球分享证据需要补充。</div></article>
+      </div>
+    </section>
+
+    <section id="mot" class="section wrap">
+      <h2>5 个 Moment of Truth</h2>
+      <p class="lead">用宝洁 MOT 思路包装个人故事：不是罗列岗位，而是展示关键时刻你如何做出判断、搭系统、拿结果。</p>
+      <div class="mots">
+        <div class="mot"><b>01｜Champion Productivity</b><h3>看见低效</h3><p>从人工 SAP 报表和邮件跟进中识别可自动化机会。</p></div>
+        <div class="mot"><b>02｜Innovate for Growth</b><h3>量化经营</h3><p>用 PEA / CVE / ROI 把促销从经验判断变成数据决策。</p></div>
+        <div class="mot"><b>03｜Execute with Excellence</b><h3>系统落地</h3><p>不是一次性报告，而是可复用的数据产品和流程工具。</p></div>
+        <div class="mot"><b>04｜Bring Out Our Best</b><h3>组织采用</h3><p>通过培训、复盘、跨部门协同，让系统真正被业务使用。</p></div>
+        <div class="mot"><b>05｜Lead with Courage</b><h3>AI 转型</h3><p>主动把企业数字化经验迁移到 Agent 工作流，探索下一代知识工作。</p></div>
+      </div>
+    </section>
+
+    <section id="evidence" class="section wrap">
+      <h2>证据地图与脱敏原则</h2>
+      <div class="timeline">
+        <div class="time"><h3>强证据：可直接进入网站</h3><p>P&G P2P 自动化、Trade Fund Transformation、PEA/CVE、PEA Logic。建议脱敏后做成 4 个案例页。</p></div>
+        <div class="time"><h3>中证据：需要补截图或业务反馈</h3><p>美云智数客户解决方案、Digital CSA。适合先做概念页，再补充脱敏材料。</p></div>
+        <div class="time"><h3>弱证据：先不强写结果</h3><p>Mars 黑客松、BI 产品、新品流程、全球交流。需要补充 deck、截图、海报、邮件反馈或业务方评价。</p></div>
+      </div>
+    </section>
+
+    <section class="wrap cta">
+      <div><h2>下一版要做成可投递的作品集附件</h2><p>建议 V1 做单页网站 + PDF 导出版；V2 再补案例详情页、截图脱敏、招聘岗位定制入口。</p></div>
+      <a class="btn" href="#cases">查看案例结构</a>
+    </section>
+  </main>
+  <footer class="foot wrap">Draft v0.1｜All business details should be reviewed and desensitized before external sharing. Evidence strength is marked to avoid overclaiming.</footer>
+</body>
+</html>
